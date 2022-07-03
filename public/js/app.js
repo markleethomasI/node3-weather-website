@@ -25,7 +25,7 @@ button.addEventListener('click', (e) => {
 
 
 const fetchWeather = (address, callback) => {
-    fetch(`http://127.0.0.1:3000/weather?address=${address}`).then((response) => {
+    fetch(`/weather?address=${address}`).then((response) => {
         response.json().then((data) => {
             if (data.error) {
                 return callback(data.error)

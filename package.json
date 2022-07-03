@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "nodemon --ext hbs,jsm,js,json ./src/app.js"
+    "serve": "nodemon --ext hbs,jsm,js,json ./src/app.js",
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",
