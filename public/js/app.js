@@ -12,14 +12,14 @@ button.addEventListener('click', (e) => {
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
 
-    fetchWeather(location, (error, data) => {
+    fetchWeather(location, (error,{ location, forecast } = {}) => {
         if (error) {
             messageTwo.textContent = ''
             return messageOne.textContent = error
         }
 
-        messageOne.textContent = data.location
-        messageTwo.textContent = data.forecast
+        messageOne.textContent = location
+        messageTwo.textContent = forecast
     })
 })
 
