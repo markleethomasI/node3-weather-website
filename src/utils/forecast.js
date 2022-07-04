@@ -8,7 +8,7 @@ const forecast = (latitude, longitude, callback) => {
             callback(`Weather Stack Error: ${body.error.info}`)
         } else {
             const { temperature: temp, precip, feelslike, weather_descriptions, wind_speed: windSpeed, wind_dir: windDirection, humidity } = body.current
-            callback(undefined, `${weather_descriptions[0]} It is currently ${temp} degrees out. It feels like ${feelslike}. It There is a ${precip}% chance of rain. \nWind direction: ${windDirection} at ${windSpeed} mph\n The humidity is ${humidity}%`)
+            callback(undefined, `${weather_descriptions[0]} It is currently ${temp} degrees out. It feels like ${feelslike}. There is a ${precip}% chance of rain. Wind direction: ${windDirection} at ${windSpeed} mph. The humidity is ${humidity}%.`)
         }
 
     })
